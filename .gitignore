@@ -11,3 +11,6 @@ __pycache__
 *.csv
 *.xls
 scraper/data/
+
+# services
+scraper/tika-server/
