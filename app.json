@@ -1,0 +1,8 @@
+{
+    "name": "Maria Quitéria",
+    "description": "Backend do portal de Dados Abertos de Feira.",
+    "repository": "https://github.com/DadosAbertosDeFeira/maria-quiteria/",
+    "scripts": {
+      "postdeploy": "./bin/config-tika.sh"
+    }
+  }
