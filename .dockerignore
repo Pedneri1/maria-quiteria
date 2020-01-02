@@ -1,7 +1,6 @@
 *.json
 */data/
-data/
 venv/
-scraper/data/
+scraper/scraper/data/
 .git
 .scrapy/
