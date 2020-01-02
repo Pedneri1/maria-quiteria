@@ -2,7 +2,7 @@ image: python:latest
 
 lint:
   before_script:
-  - pip install -r dev_requirements.txt
+  - pip install -r scraper/dev_requirements.txt
   script:
   - black --check .
   - flake8 .
@@ -10,7 +10,7 @@ lint:
 test:
   before_script:
   - python -V
-  - pip install -r dev_requirements.txt
+  - pip install -r scraper/dev_requirements.txt
   script:
   - pytest
   - cd scraper && scrapy --check
