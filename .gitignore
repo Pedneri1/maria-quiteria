@@ -11,7 +11,8 @@ __pycache__
 !app.json
 *.csv
 *.xls
-scraper/data/
+*/data/
+data/
 
 # services
 scraper/tika-server/

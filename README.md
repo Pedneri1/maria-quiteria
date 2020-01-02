@@ -4,7 +4,7 @@
 
 Um projeto para libertar dados do município de [Feira de Santana](https://pt.wikipedia.org/wiki/Feira_de_Santana).
 
-## Dados
+## Bases de Dados
 
 | Base de dados | Fonte | Descrição        | Status           | Download |
 | ------------- | ------------- | ------------- |:-------------:|:-----:|
@@ -16,6 +16,37 @@ Um projeto para libertar dados do município de [Feira de Santana](https://pt.wi
 | Pagamentos (`cityhall.py`) | Prefeitura | Pagamentos realizados pela prefeitura desde 2010. | ✅ | [Kaggle](https://www.kaggle.com/anapaulagomes/pagamentos-da-prefeitura-de-feira-de-santana) |
 
 ## Coleta
+
+### Docker
+
+Prepare seu ambiente:
+
+```bash
+docker-compose pull
+docker-compose build
+```
+
+Execute os testes:
+
+```bash
+docker-compose run --rm scraper pytest
+```
+
+Execute os spiders:
+
+```bash
+docker-compose run --rm scraper bash -c "cd scraper && python runner.py"  # dia anterior
+docker-compose run --rm scraper bash -c "cd scraper && python runner.py --all"  # todos desde data inicial
+
+```
+
+Execute um spider em específico:
+
+```bash
+docker-compose run --rm scraper bash -c "cd scraper && scrapy crawl <nome-do-spider>"
+```
+
+### Local
 
 Para rodar esse projeto localmente, instale as dependências:
 
@@ -59,3 +90,10 @@ Você pode substituir `json` por outros formatos como `csv`.
 ----
 
 Não sabe quem foi [Maria Quitéria](https://pt.wikipedia.org/wiki/Maria_Quit%C3%A9ria)?
+
+----
+
+## Agradecimentos
+
+Ao [Querido Diário](https://github.com/okfn-brasil/diario-oficial),
+fonte de inspiração cívica e tecnológica.

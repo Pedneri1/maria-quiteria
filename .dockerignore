@@ -1,0 +1,7 @@
+*.json
+*/data/
+data/
+venv/
+scraper/data/
+.git
+.scrapy/
